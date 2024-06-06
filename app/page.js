@@ -28,7 +28,7 @@ export default function Home() {
     if (newTaskText.trim() === '') return;
 
     const newTask = {
-      id: tasks.length + 1,
+      id: tasks[tasks.length - 1] ? tasks[tasks.length - 1].id + 1 : 1,
       text: newTaskText,
       completed: false
     }
